@@ -1,0 +1,24 @@
+@startuml
+
+entity Book {
+	*ID : string
+	*Author : []Author
+	Price : imported.Price
+}
+
+entity Author {
+	*ID : string
+	*Name : string
+	*Books : []Book
+}
+
+entity Showcase {
+	*BookIDs : []string
+	*TotalPrice : imported.Price
+}
+
+entity MobileShowcase {
+	Showcase
+}
+ 
+@enduml
